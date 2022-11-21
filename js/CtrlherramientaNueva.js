@@ -42,8 +42,8 @@ async function guarda(evt) {
         formData, "codigo").trim();  
     const nombre = getString(formData, "nombre").trim();
     const clasificacion = getString(formData, "clasificacion").trim();
-    const precio = getInt(formData, "grupo").trim();
-    const fecha = getString(formData, "precio").trim();
+    const precio = getInt(formData, "precio").trim();
+    const fecha = getString(formData, "fecha").trim();
     /**
      * @type {
         import("./tipos.js").
