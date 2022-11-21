@@ -1,7 +1,7 @@
 export function
   muestraHerramienta() {
   location.href =
-    "Herramientas.html";
+    "herramientas.html";
 }
 
 export function
