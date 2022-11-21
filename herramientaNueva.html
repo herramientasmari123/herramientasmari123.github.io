@@ -6,7 +6,7 @@
     content="width=device-width,
        initial-scale=1.0">
   <title>
-    Herramienta Nueva
+    Alumno Nuevo
   </title>
   <script
     src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -26,27 +26,23 @@
     href="css/estilos.css">
 </head>
 <body>
-
-  
-    <header >
-      <h1 id="text1">Herramientra Nueva </h1>
+  <form name="forma">
+    <mi-nav></mi-nav>
+    <header>
+      <h1>Alumno Nuevo</h1>
       <div class="herramientas">
-        <button type="submit">
         <a
-          href="herramientas.html">
+          href="alumnos.html">
           Cancelar</a>
-        </button>
         <button type="submit">
           Guardar
         </button>
       </div>
     </header>
-    <form id="forma" name="forma">
-      <mi-nav></mi-nav>
     <p>
       <label>
-        Codigo
-        <input name="codigo"
+        Matricula
+        <input name="matricula"
           type="text" required>
       </label>
     </p>
@@ -59,16 +55,16 @@
     </p>
     <p>
       <label>
-        Clasificacion 
-        <input name="clasificacion"
+        Teléfono
+        <input name="telefono"
           type="text" required>
       </label>
     </p>
     <p>
       <label>
-        Precio
-        <input name="precio"
-          type="number" required>
+        Grupo
+        <input name="grupo"
+          type="text" required>
       </label>
     </p>
     <p>
@@ -81,7 +77,7 @@
     <mi-footer></mi-footer>
   </form>
   <script type="module"
-    src="js/CtrlherramientaNueva.js">
+    src="js/CtrlAlumnoNuevo.js">
     </script>
 </body>
 </html>

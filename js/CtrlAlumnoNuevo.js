@@ -7,13 +7,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraHerramienta
+  muestraAlumnos
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoHerramienta =
+const daoAlumno =
   getFirestore().
     collection("Alumno");
 /** @type {HTMLFormElement} */
@@ -38,26 +38,26 @@ async function guarda(evt) {
     evt.preventDefault();
     const formData =
       new FormData(forma);
-    const codigo = getString(
-        formData, "codigo").trim();  
+    const matricula = getString(
+        formData, "matricula").trim();  
     const nombre = getString(formData, "nombre").trim();
-    const clasificacion = getString(formData, "clasificacion").trim();
-    const precio = getInt(formData, "precio").trim();
+    const telefono = getString(formData, "telefono").trim();
+    const grupo = getString(formData, "grupo").trim();
     const fecha = getString(formData, "fecha").trim();
     /**
      * @type {
         import("./tipos.js").
                 Alumno} */
     const modelo = {
-      codigo,
+      matricula,
       nombre,
-      clasificacion,
-      precio,
+      telefono,
+      grupo,
       fecha 
     };
-    await daoHerramienta.
+    await daoAlumno.
       add(modelo);
-      muestraHerramienta();
+    muestraAlumnos();
   } catch (e) {
     muestraError(e);
   }
